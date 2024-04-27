@@ -108,37 +108,6 @@ function showMetadata(sampleID){
         });
 };
 
-// // Create the Gauge display
-// function createGauge(sampleID){
-//     // Obtain data to display
-//     d3.json(url).then(function(data){
-//         // Get data for selected sampleID
-//         let metadata = data.metadata;
-//         let sampleMetadata = metadata.filter(metadata => metadata.id == sampleID);
-
-//         // Extract data from JSON object to display
-//         let sampleWashFrequency = sampleMetadata[0].wfreq;
-
-//         let gaugeData = {
-//             domain: { x: [0, 1], y: [0, 1] },
-//             range: {0:9},
-//             value: sampleWashFrequency,
-//             type: "indicator",
-//             mode: "gauge+number"
-//         };
-
-//         let gaugeTraceData = [gaugeData];
-
-//         let gaugeLayout = {
-//             title: "Number of Washes Per Week"
-//         };
-
-//         Plotly.newPlot("gauge", gaugeTraceData, gaugeLayout);
-//     });
-
-// };
-
-// Handle Changes - Update graphs
 function optionChanged(sampleID) {
     makeBarGraph(sampleID);
     makeBubbleChart(sampleID);
